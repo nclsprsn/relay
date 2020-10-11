@@ -1,0 +1,19 @@
+# default configuration file for arch-auto-install
+#
+#
+# BLOCK_DEVICE      Target block device for installation.
+# ADD               Space separated list of packages to add to base installation.
+# REMOVE            Space separated list of packages to remove from base installation.
+# HOST              Host name for new Arch instance.
+# USER              Name of non-root user account to create.
+# T_ZONE            Timezone, in the form 'Atlantic/Madeira'. i.e. only the part below '/usr/share/zoneinfo'.
+# KERNEL_CMD_OPTS   Additional kernel options. The script will add 'root=WXYZ' & 'rw' options so no need to specify these.
+#
+
+BLOCK_DEVICE="/dev/sdb"
+ADD="htop docker openssh sudo zsh vim curl unzip grub pacman-contrib dhcpcd git"
+REMOVE=""
+HOST="region-hostname"
+USER="username"
+T_ZONE="UTC"
+KERNEL_PARAMS="console=ttyS0 loglevel=7 init=/usr/lib/systemd/systemd"
